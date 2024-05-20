@@ -1,0 +1,29 @@
+.job-details {
+  .chip {
+    background-color: #5e81ac;
+    color: #FFF;
+    border-radius: 10px;
+    margin-right: 12px;
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .job-details-header {
+    margin-top: 16px;
+    align-items: center;
+    display: flex;
+  }
+
+  .job-details-logo {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 60px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

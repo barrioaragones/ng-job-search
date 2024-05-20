@@ -1,0 +1,13 @@
+<div class="card fluid" *ngIf="job">
+  <div class="company-logo">
+    <img [src]="job.companyLogo" [alt]="job.companyName">
+  </div>
+  <div class="card-content">
+    <a class="card-content-link" routerLink="/jobs-list/{{ job.id }}">{{ job.title }}</a>
+    <span class="card-content-text">Company Name: {{ job.companyName }}</span>
+    <span class="card-content-text">Reference: {{ job.reference }}</span>
+  </div>
+
+  <span class="card-fav icon-star" (click)="setFavorite(job)"
+        [ngClass]="{'active': isFavorite}" id="star-{{ job.id }}"></span>
+</div>

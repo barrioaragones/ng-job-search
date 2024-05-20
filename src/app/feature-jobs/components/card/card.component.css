@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: row;
+
+  .company-logo {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    height: 60px;
+    width: 60px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .card-content {
+    flex: 10;
+    flex: row;
+    padding: 0 16px;
+
+    .card-content-link {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      margin: 0;
+    }
+
+    .card-content-link:hover {
+      text-decoration: underline;
+    }
+    .card-content-text {
+      font-size: 12px;
+      margin-right: 16px;
+    }
+  }
+
+  .card-fav {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+
+  .card-fav.active {
+    color: yellow;
+  }
+}

@@ -1,0 +1,23 @@
+<div class="job-details responsive-padding" *ngIf="job">
+  <a routerLink="/jobs-list" class="button">
+    <span class="icon-home"></span>
+    BACK
+  </a>
+  <div class="responsive-padding row">
+    <div class="job-details-logo">
+      <img [src]="job.companyLogo" [alt]="job.companyName">
+    </div>
+    <div class="job-details-content">
+      <h2>{{ job.title }}</h2>
+      <mark class="tag responsive-margin" *ngFor="let type of job.types">{{ type }}</mark>
+      <mark class="tag responsive-margin" *ngFor="let industry of job.industries">{{ industry }}</mark>
+    </div>
+  </div>
+  <div class="job-details-text">
+    <p><strong>Publish date:</strong> {{ job.publishDate }}</p>
+    <p><strong>Location:</strong> {{ job.location }}</p>
+    <p><strong>Reference:</strong> {{ job.reference }}</p>
+    <p><strong>Description:</strong></p>
+    <div [innerHTML]="job.description"></div>
+  </div>
+</div>

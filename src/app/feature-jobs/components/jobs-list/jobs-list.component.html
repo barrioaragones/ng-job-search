@@ -1,0 +1,9 @@
+@if (jobs$ | async; as jobsList) {
+  @for (job of jobsList; track job.id) {
+    <div class="col-sm-12">
+      <app-card [job]="job"></app-card>
+    </div>
+  } @empty {
+   <p>No jobs items yet!</p>
+  }
+}
