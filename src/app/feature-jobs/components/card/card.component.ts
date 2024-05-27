@@ -14,7 +14,7 @@ import { JobsService } from '../../services/jobs.service';
 })
 export class CardComponent implements OnInit{
   @Input() job: JobListItem | undefined;
-  @Output() toggleFavorite = new EventEmitter<any>();
+  @Output() toggleFavorite = new EventEmitter<JobListItem>();
   @Input() isFavorite: boolean = false;
 
   constructor(private jobsService: JobsService) {}
